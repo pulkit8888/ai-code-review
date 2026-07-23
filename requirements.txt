@@ -7,10 +7,12 @@ redis
 celery
 
 python-dotenv
+PyJWT
+cryptography
 
 requests
 
-openai
+google-genai
 
 langchain
 langgraph
@@ -34,3 +36,5 @@ black
 isort
 
 pytest
+
+pydantic-settings

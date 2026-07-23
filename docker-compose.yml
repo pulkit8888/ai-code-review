@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+
+  postgres:
+    image: postgres:16
+
+    container_name: reviewflow-postgres
+
+    restart: always
+
+    environment:
+      POSTGRES_USER: reviewflow
+      POSTGRES_PASSWORD: reviewflow_password
+      POSTGRES_DB: reviewflow
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - reviewflow_postgres_data:/var/lib/postgresql/data
+
+
+volumes:
+
+  reviewflow_postgres_data:
